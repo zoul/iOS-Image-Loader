@@ -1,0 +1,2 @@
+@interface CCImageController : UIViewController
+@end
