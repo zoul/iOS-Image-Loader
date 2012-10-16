@@ -16,6 +16,12 @@
 		0D0A864A162D973B007C1F7C /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0A8649162D973B007C1F7C /* CCAppDelegate.m */; };
 		0D0A864F162D9743007C1F7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0A864C162D9743007C1F7C /* main.m */; };
 		0D0A8652162D97A7007C1F7C /* CCImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0A8651162D97A7007C1F7C /* CCImageController.m */; };
+		0D0A8658162D9922007C1F7C /* Image-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D0A8653162D9922007C1F7C /* Image-568h@2x.png */; };
+		0D0A8659162D9922007C1F7C /* Image~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D0A8654162D9922007C1F7C /* Image~iPad.png */; };
+		0D0A865A162D9922007C1F7C /* Image@2x~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D0A8655162D9922007C1F7C /* Image@2x~iPad.png */; };
+		0D0A865B162D9922007C1F7C /* Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D0A8656162D9922007C1F7C /* Image.png */; };
+		0D0A865C162D9922007C1F7C /* Image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D0A8657162D9922007C1F7C /* Image@2x.png */; };
+		0D0A8661162D9B8D007C1F7C /* UIImage+H568.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0A8660162D9B8D007C1F7C /* UIImage+H568.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +39,13 @@
 		0D0A864D162D9743007C1F7C /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = Support/Prefix.pch; sourceTree = SOURCE_ROOT; };
 		0D0A8650162D97A7007C1F7C /* CCImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCImageController.h; path = Classes/CCImageController.h; sourceTree = SOURCE_ROOT; };
 		0D0A8651162D97A7007C1F7C /* CCImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCImageController.m; path = Classes/CCImageController.m; sourceTree = SOURCE_ROOT; };
+		0D0A8653162D9922007C1F7C /* Image-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Image-568h@2x.png"; sourceTree = "<group>"; };
+		0D0A8654162D9922007C1F7C /* Image~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Image~iPad.png"; sourceTree = "<group>"; };
+		0D0A8655162D9922007C1F7C /* Image@2x~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Image@2x~iPad.png"; sourceTree = "<group>"; };
+		0D0A8656162D9922007C1F7C /* Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image.png; sourceTree = "<group>"; };
+		0D0A8657162D9922007C1F7C /* Image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Image@2x.png"; sourceTree = "<group>"; };
+		0D0A865F162D9B8D007C1F7C /* UIImage+H568.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+H568.h"; path = "Classes/UIImage+H568.h"; sourceTree = SOURCE_ROOT; };
+		0D0A8660162D9B8D007C1F7C /* UIImage+H568.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+H568.m"; path = "Classes/UIImage+H568.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +98,8 @@
 				0D0A8649162D973B007C1F7C /* CCAppDelegate.m */,
 				0D0A8650162D97A7007C1F7C /* CCImageController.h */,
 				0D0A8651162D97A7007C1F7C /* CCImageController.m */,
+				0D0A865F162D9B8D007C1F7C /* UIImage+H568.h */,
+				0D0A8660162D9B8D007C1F7C /* UIImage+H568.m */,
 			);
 			path = "Image Loader";
 			sourceTree = "<group>";
@@ -103,11 +118,32 @@
 		0D0A8641162D9725007C1F7C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0D0A865E162D9AD4007C1F7C /* Splashes */,
+				0D0A865D162D9ACC007C1F7C /* Sample Image */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0D0A865D162D9ACC007C1F7C /* Sample Image */ = {
+			isa = PBXGroup;
+			children = (
+				0D0A8653162D9922007C1F7C /* Image-568h@2x.png */,
+				0D0A8654162D9922007C1F7C /* Image~iPad.png */,
+				0D0A8655162D9922007C1F7C /* Image@2x~iPad.png */,
+				0D0A8656162D9922007C1F7C /* Image.png */,
+				0D0A8657162D9922007C1F7C /* Image@2x.png */,
+			);
+			name = "Sample Image";
+			sourceTree = "<group>";
+		};
+		0D0A865E162D9AD4007C1F7C /* Splashes */ = {
+			isa = PBXGroup;
+			children = (
 				0D0A8642162D9725007C1F7C /* Default-568h@2x.png */,
 				0D0A8643162D9725007C1F7C /* Default.png */,
 				0D0A8644162D9725007C1F7C /* Default@2x.png */,
 			);
-			path = Resources;
+			name = Splashes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +201,11 @@
 				0D0A8645162D9725007C1F7C /* Default-568h@2x.png in Resources */,
 				0D0A8646162D9725007C1F7C /* Default.png in Resources */,
 				0D0A8647162D9725007C1F7C /* Default@2x.png in Resources */,
+				0D0A8658162D9922007C1F7C /* Image-568h@2x.png in Resources */,
+				0D0A8659162D9922007C1F7C /* Image~iPad.png in Resources */,
+				0D0A865A162D9922007C1F7C /* Image@2x~iPad.png in Resources */,
+				0D0A865B162D9922007C1F7C /* Image.png in Resources */,
+				0D0A865C162D9922007C1F7C /* Image@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +219,7 @@
 				0D0A864A162D973B007C1F7C /* CCAppDelegate.m in Sources */,
 				0D0A864F162D9743007C1F7C /* main.m in Sources */,
 				0D0A8652162D97A7007C1F7C /* CCImageController.m in Sources */,
+				0D0A8661162D9B8D007C1F7C /* UIImage+H568.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
