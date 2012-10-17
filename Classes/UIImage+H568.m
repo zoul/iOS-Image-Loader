@@ -23,14 +23,19 @@
     );
 }
 
+// Note that calling +imageNamedH568: here is not a recursive call,
+// since we have exchanged the method implementations for +imageNamed:
+// and +imageNamedH568: above.
 + (UIImage*) imageNamedH568: (NSString*) imageName
 {
     NSString *tallImageName = [imageName stringByAppendingString:@"-568h@2x"];
     NSString *tallImagePath = [[NSBundle mainBundle] pathForResource:tallImageName ofType:@"png"];
-    // Note that this is not a recursive call. Since we have exchanged the
-    // method implementations for +imageNamed: and +imageNamedH568:, calling
-    // +imageNamedH568 now calls the original +imageNamed: implementation.
-    return [UIImage imageNamedH568:tallImagePath ? tallImageName : imageName];
+    if (tallImagePath != nil) {
+        // Tall image found, let’s use it. We just have to pass the
+        // image name without the @2x suffix to get the correct scale.
+        imageName = [imageName stringByAppendingString:@"-568h"];
+    }
+    return [UIImage imageNamedH568:imageName];
 }
 
 @end
