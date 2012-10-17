@@ -29,7 +29,7 @@
     NSString *tallImagePath = [[NSBundle mainBundle] pathForResource:tallImageName ofType:@"png"];
     // Note that this is not a recursive call. Since we have exchanged the
     // method implementations for +imageNamed: and +imageNamedH568:, calling
-    // +imageNamedH568 now calls the original +imageNamed: implementation.
+    // +imageNamedH568: now calls the original +imageNamed: implementation.
     return [UIImage imageNamedH568:tallImagePath ? tallImageName : imageName];
 }
 
