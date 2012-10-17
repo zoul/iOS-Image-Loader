@@ -1,5 +1,5 @@
 #import "UIImage+H568.h"
-#include <objc/runtime.h>
+#import <objc/runtime.h>
 
 @implementation UIImage(H568)
 
