@@ -25,34 +25,12 @@
 
 + (UIImage*) imageNamedH568: (NSString*) imageName
 {
-    NSMutableString *mutableImageName = [imageName mutableCopy];
-
-    // Strip extension if supplied
-    NSRange extension = [imageName rangeOfString:@".png" options:NSBackwardsSearch | NSAnchoredSearch];
-    if (extension.location != NSNotFound) {
-        [mutableImageName deleteCharactersInRange:extension];
-    }
-
-    // Insert the -568h marker at correct position
-    NSRange retinaMarker = [imageName rangeOfString:@"@2x"];
-    if (retinaMarker.location != NSNotFound) {
-        [mutableImageName insertString:@"-568h" atIndex:retinaMarker.location];
-    } else {
-        [mutableImageName appendString:@"-568h@2x"];
-    }
-    
-    NSString *imagePath = [[NSBundle mainBundle] pathForResource:mutableImageName ofType:@"png"];
-
-    if (imagePath) {
-        // The -568h image version exists, remove the @2x to load with
-        // correct scale and call the original method implementation
-        [mutableImageName replaceOccurrencesOfString:@"@2x" withString:@""
-            options:NSBackwardsSearch range:NSMakeRange(0, [mutableImageName length])];
-        return [UIImage imageNamedH568:mutableImageName];
-    } else {
-        // The -568h image version does not exist, call original method
-        return [UIImage imageNamedH568:imageName];
-    }
+    NSString *tallImageName = [imageName stringByAppendingString:@"-568h@2x"];
+    NSString *tallImagePath = [[NSBundle mainBundle] pathForResource:tallImageName ofType:@"png"];
+    // Note that this is not a recursive call. Since we have exchanged the
+    // method implementations for +imageNamed: and +imageNamedH568:, calling
+    // +imageNamedH568 now calls the original +imageNamed: implementation.
+    return [UIImage imageNamedH568:tallImagePath ? tallImageName : imageName];
 }
 
 @end
